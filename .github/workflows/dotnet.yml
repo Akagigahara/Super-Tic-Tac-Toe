@@ -17,3 +17,4 @@ jobs:
     steps:
     -  name: publish command
        run: dotnet publish
+           | cd
