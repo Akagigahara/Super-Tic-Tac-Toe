@@ -16,4 +16,4 @@ jobs:
     
     steps:
     -  name: publish command
-       run: dotnet publish -C Release
+       run: dotnet publish
