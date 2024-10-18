@@ -16,5 +16,4 @@ jobs:
     
     steps:
     -  name: publish command
-       run: dotnet publish
-           | cd
+       run: dotnet publish Super-Tic-Tac-Toe/Super-Tic-Tac-Toe.csproj
