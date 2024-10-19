@@ -21,4 +21,4 @@ jobs:
       run: dotnet publish -r win-x64
 
     - name: create release
-      run: gh create release 'latest' --title 'latest release' --notes 'this is the latest release'
+      run: gh release create 'latest' --title 'latest release' --notes 'this is the latest release'
