@@ -19,8 +19,6 @@ jobs:
 
     - name: publish windows
       run: dotnet publish -r win-x64
-    - name: publish linux
-      run: dotnet publish -r linux
     - name: create release
       run: gh release create 'latest' --title 'latest release' --notes 'this is the latest release'
       env:
