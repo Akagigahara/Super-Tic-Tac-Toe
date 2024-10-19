@@ -20,6 +20,6 @@ jobs:
     - name: publish windows
       run: dotnet publish -r win-x64
     - name: create release
-      run: gh release create D:/a/Super-Tic-Tac-Toe/Super-Tic-Tac-Toe/Super-Tic-Tac-Toe/bin/Release/net8.0-windows/win-x64/publish/Super-Tic-Tac-Toe.exe   --title 'latest release' --notes 'this is the latest release' --latest
+      run: gh release create release D:/a/Super-Tic-Tac-Toe/Super-Tic-Tac-Toe/Super-Tic-Tac-Toe/bin/Release/net8.0-windows/win-x64/publish/Super-Tic-Tac-Toe.exe   --title 'latest release' --notes 'this is the latest release' --latest
       env:
         GH_TOKEN: ${{ github.token }}
