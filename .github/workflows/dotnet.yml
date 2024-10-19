@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@4
+    - uses: actions/checkout@v4
 
     - name: publish command
       run: dotnet publish -c win-x64
