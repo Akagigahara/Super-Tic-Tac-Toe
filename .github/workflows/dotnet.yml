@@ -15,8 +15,7 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - name: fetch repo
-      run: git checkout master
-      
+    - uses: actions/checkout@4
+
     - name: publish command
-      run: dotnet publish Super-Tic-Tac-Toe/Super-Tic-Tac-Toe.csproj
+      run: dotnet publish -c win-x64
