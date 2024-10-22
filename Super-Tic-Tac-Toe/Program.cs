@@ -71,8 +71,23 @@ void RenderGame()
 	}
 	RenderedGame.AddRow(Game.small_Grids[3].ToString(), Game.small_Grids[4].ToString(), Game.small_Grids[5].ToString()).Centered();
 	RenderedGame.AddRow(Game.small_Grids[6].ToString(), Game.small_Grids[7].ToString(), Game.small_Grids[8].ToString()).Centered();
+
 	AnsiConsole.Clear();
-	AnsiConsole.Write(new Columns(new Text($" Current Round: {round}"), new Text($" Current Player: {currentPlayer}").RightJustified()));
+	AnsiConsole.Write(new Columns(new Text($" Current Round: {round}"),
+		new Text($"Current Grid: { Array.IndexOf(Game.small_Grids, playedGrid) switch 
+			{
+				0 => "Top Left",
+				1 => "Top",
+				2 => "Top Right",
+				3 => "Left",
+				4 => "Middle",
+				5 => "Right",
+				6 => "Bottom Left",
+				7 => "Bottom",
+				8 => "Bottom Right",
+				_ => "invalid grid"
+			}}"),
+		new Text($" Current Player: {currentPlayer}").RightJustified()));
 	AnsiConsole.Write(RenderedGame.Centered());
 	AnsiConsole.WriteLine();
 	AnsiConsole.WriteLine();
@@ -381,7 +396,7 @@ void SwitchPlayers()
 	};
 }
 
-class GameUtils
+public class GameUtils
 {
 	public enum GridState
 	{

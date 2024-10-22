@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Super_Tic_Tac_Toe
 {
-	internal class Small_Grid
+	public class Small_Grid
 	{
-		internal GameUtils.GridState gridState = GameUtils.GridState.open;
+		public GameUtils.GridState gridState = GameUtils.GridState.open;
 		internal char topLeft { get; set; } = ' ';
 		internal char top { get; set; } = ' ';
 		internal char topRight { get; set; } = ' ';
@@ -127,7 +127,7 @@ namespace Super_Tic_Tac_Toe
 			}
 			else if (topRight == right && right == bottomRight && right != ' ')
 			{
-				switch (middle)
+				switch (right)
 				{
 					case 'x':
 						gridState = GameUtils.GridState.cross;
