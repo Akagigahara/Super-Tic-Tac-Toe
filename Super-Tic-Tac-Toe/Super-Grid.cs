@@ -27,14 +27,6 @@ namespace Super_Tic_Tac_Toe
 						   bottomLeft, bottom, bottomRight];
 		}
 
-		public override string ToString() =>
-				$"""
-				{topLeft} || {top} || {topRight}
-				===++===++===
-				{left} || {middle} || {right}
-				===++===++===
-				{bottomLeft} || {bottom} || {bottomRight}
-				""";
 		public void CheckGameState()
 		{
 			if (topLeft.gridState == top.gridState && top.gridState == topRight.gridState)
